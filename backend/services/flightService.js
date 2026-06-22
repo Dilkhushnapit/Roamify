@@ -18,20 +18,20 @@ export const getFlights = async ({
           outbound_date,
           travel_class,
           adults,
-          currency: "USD",
+          currency: "INR",
           language_code: "en-US",
-          country_code: "US",
+          country_code: "IN",
           search_type: "best",
           show_hidden: 1,
         },
-        
+
         headers: {
           "x-rapidapi-key": env.RAPID_API_KEY,
           "x-rapidapi-host": env.RAPID_API_HOST,
         },
       }
     );
-    
+
 
     return response.data;
   } catch (error) {

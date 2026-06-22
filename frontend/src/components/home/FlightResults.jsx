@@ -42,7 +42,7 @@ function FlightResults({ results, isLoading, error, searchParams }) {
 
   const formatPrice = (price) => {
     if (typeof price === "number") {
-      return `$${price.toLocaleString("en-US")}`;
+      return `₹${price.toLocaleString("en-IN")}`;
     }
     return price || "Unavailable";
   };

@@ -23,7 +23,7 @@ function Deals() {
             <p>Limited time summer offer</p>
 
             <div className="deal-price">
-              $399
+              ₹32,999
             </div>
           </div>
 
@@ -35,7 +35,7 @@ function Deals() {
             <p>Weekend special deal</p>
 
             <div className="deal-price">
-              $449
+              ₹36,999
             </div>
           </div>
 
@@ -47,7 +47,7 @@ function Deals() {
             <p>Most booked route this month</p>
 
             <div className="deal-price">
-              $299
+              ₹24,999
             </div>
           </div>
 
