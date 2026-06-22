@@ -1,1 +1,4 @@
 .env
+# PORT=5001
+# RAPID_API_KEY=
+# RAPID_API_HOST=google-flights2.p.rapidapi.com
