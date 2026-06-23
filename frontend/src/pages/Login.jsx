@@ -1,6 +1,5 @@
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
-
 import LoginForm from "../components/auth/LoginForm";
 
 function Login() {
@@ -8,7 +7,9 @@ function Login() {
     <>
       <Navbar />
 
-      <LoginForm />
+      <div className="auth-container">
+        <LoginForm />
+      </div>
 
       <Footer />
     </>
