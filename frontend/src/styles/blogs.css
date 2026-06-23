@@ -1,0 +1,190 @@
+.blogs-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.blogs-header {
+  background-color: var(--primary, #0056b3); /* Navbar wala blue color use karega */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+}
+
+.blogs-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.blogs-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Grid Layout for Cards */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Individual Blog Card */
+.blog-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card-image {
+  height: 200px;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.blog-card-content {
+  padding: 24px;
+}
+
+.blog-category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d93025;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.blog-card-content h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.blog-desc {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--primary, #0056b3);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+/* === ADD BLOG PAGE STYLING === */
+
+.add-blog-page {
+  background-color: #f8f9fa; /* Light grey background jisse card alag dikhe */
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.add-blog-card {
+  background: white;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.add-blog-header {
+  background-color: var(--primary, #0056b3); /* Theme wala Blue color */
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.add-blog-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+}
+
+.add-blog-header p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.add-blog-form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary, #0056b3);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1); /* Halka blue glow */
+}
+
+/* Inherits your orange accent color from .nav-btn but makes it full width */
+.publish-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}

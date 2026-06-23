@@ -23,7 +23,7 @@ function Destinations() {
             />
             <div className="destination-content">
               <h3>Dubai</h3>
-              <p>Starting from $399</p>
+              <p>Starting from ₹32,999</p>
             </div>
           </div>
 
@@ -34,7 +34,7 @@ function Destinations() {
             />
             <div className="destination-content">
               <h3>Thailand</h3>
-              <p>Starting from $299</p>
+              <p>Starting from ₹24,999</p>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ function Destinations() {
             />
             <div className="destination-content">
               <h3>Singapore</h3>
-              <p>Starting from $449</p>
+              <p>Starting from ₹36,999</p>
             </div>
           </div>
 
