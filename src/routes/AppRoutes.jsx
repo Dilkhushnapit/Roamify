@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Privacy from "../pages/Privacy";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 function AppRoutes() {
   return (
@@ -17,6 +19,9 @@ function AppRoutes() {
       <Route path="/privacy" element={<Privacy />} />
 
       <Route path="*" element={<Navigate to="/" />} />
+      <Route path="/login" element={<Login />} />
+
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 }

@@ -6,10 +6,12 @@ function Navbar() {
     <nav className="navbar">
       <div className="container navbar-container">
 
+        {/* Logo */}
         <Link to="/" className="logo">
           ✈ Roamify
         </Link>
 
+        {/* Navigation Links */}
         <div className="nav-links">
           <Link to="/">Home</Link>
 
@@ -20,9 +22,18 @@ function Navbar() {
           <Link to="/privacy">Privacy</Link>
         </div>
 
-        <button className="nav-btn">
-          Explore Deals
-        </button>
+        {/* Auth Buttons */}
+        <div className="nav-actions">
+
+          <Link to="/login" className="login-btn">
+            Login
+          </Link>
+
+          <Link to="/register" className="register-btn">
+            Register
+          </Link>
+
+        </div>
 
       </div>
     </nav>
