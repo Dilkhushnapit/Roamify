@@ -7,6 +7,7 @@ import Privacy from "../pages/Privacy";
 import Blogs from '../pages/Blogs';
 import BlogPost from "../pages/BlogPost";
 import AddBlog from "../pages/AddBlog";
+import EditBlog from '../pages/EditBlog';
 
 function AppRoutes() {
   return (
@@ -21,6 +22,7 @@ function AppRoutes() {
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/add-blog" element={<AddBlog />} />
+      <Route path="/edit-blog/:slug" element={<EditBlog />} />
       <Route path="*" element={<Navigate to="/" />} />
       
     </Routes>
