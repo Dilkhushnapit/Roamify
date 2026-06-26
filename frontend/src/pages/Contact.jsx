@@ -1,18 +1,39 @@
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
 
-function About() {
+import ContactHero from "../components/contact/ContactHero";
+import ContactChannels from "../components/contact/ContactChannels";
+import ContactForm from "../components/contact/ContactForm";
+import ContactSidebar from "../components/contact/ContactSidebar";
+import FAQ from "../components/contact/FAQ";
+import ContactCTA from "../components/contact/ContactCTA";
+
+import "../styles/contact.css";
+
+function Contact() {
   return (
     <>
       <Navbar />
 
-      <div className="container section">
-        <h1>Contact Page</h1>
-      </div>
+      <ContactHero />
+
+      <ContactChannels />
+
+      <section className="contact-layout container">
+
+        <ContactForm />
+
+        <ContactSidebar />
+
+      </section>
+
+      <FAQ />
+
+      <ContactCTA />
 
       <Footer />
     </>
   );
 }
 
-export default About;
+export default Contact;
