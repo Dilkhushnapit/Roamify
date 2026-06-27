@@ -534,3 +534,26 @@
     font-family: inherit;
     font-size: 0.95rem;
   }
+.trip-toggle{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.trip-toggle button{
+    padding:10px 24px;
+    border:none;
+    border-radius:25px;
+    background:#eef4ff;
+    color:#0F4C81;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.trip-toggle button.active{
+    background:#0F4C81;
+    color:white;
+}

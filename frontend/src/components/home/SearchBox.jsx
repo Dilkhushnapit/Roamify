@@ -5,19 +5,27 @@ function SearchBox({ onSearch, isLoading }) {
   const [departure, setDeparture] = useState("DEL");
   const [arrival, setArrival] = useState("BOM");
   const [departureDate, setDepartureDate] = useState("2026-07-15");
+
+  const [tripType, setTripType] = useState("roundtrip");
+  const [returnDate, setReturnDate] = useState("2026-07-22");
+
   const [travelClass, setTravelClass] = useState("ECONOMY");
   const [adults, setAdults] = useState("1");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!departure || !arrival || !departureDate) {
       alert("Please fill in departure, arrival and date fields.");
       return;
     }
+
     onSearch({
       departure_id: departure.toUpperCase().trim(),
       arrival_id: arrival.toUpperCase().trim(),
       outbound_date: departureDate,
+      return_date: tripType === "roundtrip" ? returnDate : "",
+      trip_type: tripType,
       travel_class: travelClass,
       adults: parseInt(adults, 10),
     });
@@ -27,11 +35,31 @@ function SearchBox({ onSearch, isLoading }) {
     <section className="search-section">
       <div className="container">
         <form onSubmit={handleSubmit} className="search-card">
+
+          {/* Trip Type */}
+          <div className="trip-toggle">
+            <button
+              type="button"
+              className={tripType === "oneway" ? "active" : ""}
+              onClick={() => setTripType("oneway")}
+            >
+              One Way
+            </button>
+
+            <button
+              type="button"
+              className={tripType === "roundtrip" ? "active" : ""}
+              onClick={() => setTripType("roundtrip")}
+            >
+              Round Trip
+            </button>
+          </div>
+
           <div className="search-field">
             <label>From (IATA Code)</label>
-            <input 
-              type="text" 
-              placeholder="e.g. DEL" 
+            <input
+              type="text"
+              placeholder="e.g. DEL"
               value={departure}
               onChange={(e) => setDeparture(e.target.value)}
               required
@@ -40,9 +68,9 @@ function SearchBox({ onSearch, isLoading }) {
 
           <div className="search-field">
             <label>To (IATA Code)</label>
-            <input 
-              type="text" 
-              placeholder="e.g. BOM" 
+            <input
+              type="text"
+              placeholder="e.g. BOM"
               value={arrival}
               onChange={(e) => setArrival(e.target.value)}
               required
@@ -51,17 +79,32 @@ function SearchBox({ onSearch, isLoading }) {
 
           <div className="search-field">
             <label>Departure</label>
-            <input 
-              type="date" 
+            <input
+              type="date"
               value={departureDate}
               onChange={(e) => setDepartureDate(e.target.value)}
               required
             />
           </div>
 
+          {tripType === "roundtrip" && (
+            <div className="search-field">
+              <label>Return</label>
+              <input
+                type="date"
+                value={returnDate}
+                onChange={(e) => setReturnDate(e.target.value)}
+              />
+            </div>
+          )}
+
           <div className="search-field font-travellers">
             <label>Class</label>
-            <select value={travelClass} onChange={(e) => setTravelClass(e.target.value)}>
+
+            <select
+              value={travelClass}
+              onChange={(e) => setTravelClass(e.target.value)}
+            >
               <option value="ECONOMY">Economy</option>
               <option value="PREMIUM_ECONOMY">Premium Economy</option>
               <option value="BUSINESS">Business</option>
@@ -71,7 +114,11 @@ function SearchBox({ onSearch, isLoading }) {
 
           <div className="search-field font-travellers">
             <label>Travellers</label>
-            <select value={adults} onChange={(e) => setAdults(e.target.value)}>
+
+            <select
+              value={adults}
+              onChange={(e) => setAdults(e.target.value)}
+            >
               <option value="1">1 Traveller</option>
               <option value="2">2 Travellers</option>
               <option value="3">3 Travellers</option>
@@ -80,9 +127,14 @@ function SearchBox({ onSearch, isLoading }) {
             </select>
           </div>
 
-          <button type="submit" className="search-btn" disabled={isLoading}>
+          <button
+            type="submit"
+            className="search-btn"
+            disabled={isLoading}
+          >
             {isLoading ? "Searching..." : "Search"}
           </button>
+
         </form>
       </div>
     </section>
