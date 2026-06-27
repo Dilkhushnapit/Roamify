@@ -12,6 +12,8 @@ import Blogs from "../pages/Blogs";
 import BlogPost from "../pages/BlogPost";
 import AddBlog from "../pages/AddBlog";
 import EditBlog from "../pages/EditBlog";
+import LastMinuteFlights from "../pages/LastMinuteFlights";
+import MultiCityFlights from "../pages/MultiCityFlights";
 
 function AppRoutes() {
   return (
@@ -33,6 +35,8 @@ function AppRoutes() {
       <Route path="/register" element={<Register />} />
 
       <Route path="*" element={<Navigate to="/" />} />
+      <Route path="/last-minute" element={<LastMinuteFlights />} />
+      <Route path="/multi-city" element={<MultiCityFlights />} />
     </Routes>
   );
 }
